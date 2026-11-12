@@ -1,0 +1,36 @@
+/* A clean stylesheet — no property is declared twice in one rule. */
+.header {
+  color: #111;
+  background: #fff;
+}
+
+.btn {
+  padding: 8px 16px;
+  color: #06c;
+}
+
+.btn:hover {
+  background: #eee;
+  color: #fff;
+}
+
+/* The next rule looks like a duplicate, but color and
+   background-color are different properties. */
+.card {
+  color: red;
+  background-color: blue;
+}
+
+@media (min-width: 600px) {
+  .header {
+    font-size: 20px;
+    color: #222;
+  }
+}
+
+/* content with a semicolon and a brace inside a string must not
+   confuse the check: */
+.quote::before {
+  content: "; }";
+  color: #333;
+}
